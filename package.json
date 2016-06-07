@@ -1,0 +1,22 @@
+{
+  "name": "alexfrazer.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexFrazer/alexfrazer.github.io.git"
+  },
+  "author": {
+    "name": "Alex Frazer",
+    "email": "AlexADFrazer@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexFrazer/alexfrazer.github.io/issues"
+  },
+  "homepage": "https://github.com/AlexFrazer/alexfrazer.github.io#readme"
+}

@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 
 import Skill from './Skill';
 import { skills } from '../resume';
+import { Row, Col } from 'react-bootstrap';
 
 export default class Skills extends Component {
   static propTypes = {
@@ -10,8 +11,8 @@ export default class Skills extends Component {
   };
   static defaultProps = {
     data: skills
-  }
-  showSkills() {
+  };
+  renderSkills() {
     return this.props.data.map(skill => <Skill
       key={v1()}
       {...skill}
@@ -20,7 +21,8 @@ export default class Skills extends Component {
   render() {
     return (
       <div className="skills">
-        {this.showSkills()}
+        {this.renderSkills()}
+        <hr />
       </div>
     )
   }

@@ -21,9 +21,9 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        <About
-          description="Hello"
-        />
+        <About>
+          <Skills />
+        </About>
       </div>
     )
   }

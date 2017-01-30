@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { Router, hashHistory } from 'react-router';
+import React from 'react';
 import { render } from 'react-dom';
+import Router from 'react-router/lib/Router';
+import hashHistory from 'react-router/lib/hashHistory';
 
-import './app.global.css';
-import './animate.global.css';
 import routes from './routes';
 
 render(

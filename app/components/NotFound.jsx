@@ -1,11 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 
-export default class NotFound extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Path Not Found</h1>
-      </div>
-    )
-  }
+export default function NotFound() {
+  return (
+    <div></div>
+  );
 }

@@ -34,8 +34,6 @@ const baseConfig = {
   resolve: {
     alias: {
       app: basePath,
-      atoms: path.resolve(__dirname, 'patterns/atoms'),
-      molecules: path.resolve(__dirname, 'patterns/molecules'),
     },
     modules: [
       'node_modules',
@@ -52,7 +50,7 @@ const baseConfig = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: Infinity,
-      filename: 'vendor-[hash].js',
+      filename: 'vendor.js',
     }),
     new webpack.LoaderOptionsPlugin({
       options: {

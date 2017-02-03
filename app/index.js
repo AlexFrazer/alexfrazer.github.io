@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Router from 'react-router/lib/Router';
-import hashHistory from 'react-router/lib/hashHistory';
+import browserHistory from 'react-router/lib/browserHistory';
 
 import routes from './routes';
 
 render(
-  <Router routes={routes} history={hashHistory} />,
+  <Router routes={routes} history={browserHistory} />,
   document.getElementById('root')
 );

@@ -13,7 +13,7 @@ module.exports = {
       loader: ExtractTextPlugin.extract({
         fallbackLoader: 'style-loader',
         loader: 'css-loader?modules!postcss-loader!sass-loader',
-        publicPath: '/dist',
+        publicPath: '/',
       }),
     }],
   },
@@ -35,7 +35,7 @@ module.exports = {
       debug: false,
     }),
     new ExtractTextPlugin({
-      filename: 'style-[hash].css',
+      filename: 'style.css',
       disable: false,
       allChunks: true,
     }),

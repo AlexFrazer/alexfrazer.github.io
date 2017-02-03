@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import Navigation from 'app/components/Navigation';
 import { VelocityComponent } from 'velocity-react';
@@ -13,28 +14,21 @@ export default class App extends Component {
   onHeaderRendered = () => this.setState({ headerRendered: true });
 
   renderContent() {
-    const { headerRendered: ready } = this.state;
-
-    return (
-      <VelocityComponent
-        delay={500}
-        duration={1000}
-        animation={{
-          opacity: ready ? 1 : 0,
-          translateX: ready ? 0 : -25,
-        }}
-      >
-        <div className={styles.content}>
-          {this.props.children}
-        </div>
-      </VelocityComponent>
-    );
+    if (this.state.headerRendered) {
+      return (
+        <SlideIn>
+          <div>
+            {this.props.children}
+          </div>
+        </SlideIn>
+      );
+    }
   }
 
   render() {
     const { children } = this.props;
     return (
-      <div className={styles.app}>
+      <div className={classnames(styles.app, styles.content)}>
         <SlideIn onComplete={this.onHeaderRendered}>
           <div className={styles.header}>
             <div className={styles.title}>Alex Frazer</div>

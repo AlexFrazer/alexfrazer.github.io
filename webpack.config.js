@@ -27,7 +27,7 @@ const baseConfig = {
     }],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: __dirname,
     filename: '[name].bundle.js',
     publicPath: '/',
   },
@@ -67,6 +67,7 @@ const baseConfig = {
         context: path.resolve(__dirname, 'app'),
       },
     }),
+    new webpack.NamedModulesPlugin(),
   ],
 };
 

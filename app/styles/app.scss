@@ -1,0 +1,55 @@
+@import 'app/styles/colors';
+
+.app {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  color: $primary;
+  line-height: 1;
+  position: absolute;
+  background: #FFFFFF;
+  flex-direction: column;
+}
+
+.header {
+  padding: 30px;
+  font-size: 3em;
+  align-self: center;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.content {}
+
+@media (max-width: 575px) {
+  .content {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .content {
+    padding: 0 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .content {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .content {
+    padding: 0 15%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    padding: 0 20%;
+  }
+}
